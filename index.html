@@ -9,45 +9,64 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.js" 
     integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" 
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/style.css">
     <title>Javascript test</title>
 
 </head>
 <body>
     
-<section class="test-containter" id="test">
-  <div class="test-header">
-  <h2 id="question">Question Text</h2>
-  <ul>
-    <li>
-        <input type="radio" name="answer" id="a" class="answer">
-        <label for="a" id="a_text">answer</label>
-    </li>
-    <li>
-        <input type="radio" name="answer" id="b" class="answer">
-        <label for="b" id="b_text">answer</label>
-    </li>
-    <li>
-        <input type="radio" name="answer" id="c" class="answer">
-        <label for="c" id="c_text">answer</label>
-    </li>
-    <li>
-        <input type="radio" name="answer" id="d" class="answer">
-        <label for="d" id="d_text">answer</label>
-    </li>
-    <li>
-        <input type="radio" name="answer" id="e" class="answer">
-        <label for="e" id="e_text">answer</label>
-    </li>
-  </ul>
-  </div>
+<section class="test-containter mt-5">
+ <h5 class="card-text float-right font-weight-bold" >Total Time :  <br> (00: <span id="time">00</span>)</h5>
 
-<button id="submit">submit</button>
+
+ <!-- first page -->
+
+ <div class="row d-flex justify-content-center">
+    <div class="col-md-8 border p-4">
+        <div class="card-body">
+            <h5 class="card-text float-right font-weight-bold">MC Test</h5>
+            <h5>(<span id="number">0</span> of 5)</h5>
+        </div>
+        <hr>
+
+        <div class="start_page">
+            <h3 class="text-center mb-5">Javascript MCQ's</h3>
+            <p>You will get 10 points for each correct answer, At the end of the Test, your total score will be displayed. Maximum score is 50 points.</p>
+            <button class="btn btn-success d-flex mx-auto mt-4" id="btn"><h5>Start the test</h5></button>
+        </div>
+
+<!-- Test page-->
+     <div id="main">
+        <div class="card-body">
+            <h5 class="card-text font-weight-bold" id="question"></h5>
+        </div>
+        <div class="col-md-12 p-4" id="question">
+            <button class="btn btn-block btn-outline-success text-left option" id="option1"></button>
+            <button class="btn btn-block btn-outline-success text-left option" id="option2"></button>
+            <button class="btn btn-block btn-outline-success text-left option" id="option3"></button>
+            <button class="btn btn-block btn-outline-success text-left option" id="option4"></button>
+
+            <div class="footer p-4">
+                <button class="btn btn-success float-left" id="perv">Previos</button>
+                <button class="btn btn-success float-right" id="next">Next</button>
+            </div>
+        </div>
+
+     </div>
+
+
+    </div>
+ </div>
 
 </section>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" 
+integrity="sha512-ubuT8Z88WxezgSqf3RLuNi5lmjstiJcyezx34yIU2gAHonIi27Na7atqzUZCOoY4CExaoFumzOsFQ2Ch+I/HCw==" 
+crossorigin="anonymous" 
+referrerpolicy="no-referrer"></script>
 
-<script src=""></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" 
+integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" 
+crossorigin="anonymous"></script>
+
 </body>
 </html>
