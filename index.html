@@ -39,7 +39,7 @@
         <div class="card-body">
             <h5 class="card-text font-weight-bold" id="question"></h5>
         </div>
-        <div class="col-md-12 p-4" id="question">
+        <div class="col-md-12 p-4" id="options">
             <button class="btn btn-block btn-outline-success text-left option" id="option1"></button>
             <button class="btn btn-block btn-outline-success text-left option" id="option2"></button>
             <button class="btn btn-block btn-outline-success text-left option" id="option3"></button>
@@ -61,7 +61,7 @@
      <div id="Result">
         <h3 class="mt-5 display-4">Marks: <span id="marks"></span>/50</h3>
         <h3 class="mt-4"><span id="correct-answer">3</span> Correct out of 5</h3>
-        <h3 class="mt-4">Result : <span id="precentage">100%</span></h3>
+        <h3 class="mt-4">Result : <span id="percentage">100%</span></h3>
      </div>
 
     </div>
@@ -116,7 +116,33 @@ function adding_Questions(data,i){
     $('#number').text(Number(i+1));
 }
 
+// Answer Selection Function 
 
+function selected_Answer(){
+    for(var i =0 ; i<4; i++){
+        var a = document.getElementById("options").children;
+        if(a[i].innerHTML == answer[count]){
+            $("#options").children("button")[i].classList.add("active");
+        }
+        else{
+            $("#options").children("button")[i].classList.remove("active");
+        }
+    }
+}
+
+function creating_result(data){
+    for(var i = 0 ; i<answer.length; i++){
+        marks +=5;
+    }
+    $('#main').hide();
+
+    $("marks").text(marks);
+    $("#correct-answer").text(marks / 10);
+    $('#correct-answer').text((marks / 50)* 100 + "%");
+
+    $("#Result").show();
+}
+$("#options").hide();
 
 })
 
