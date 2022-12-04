@@ -46,7 +46,7 @@
             <button class="btn btn-block btn-outline-success text-left option" id="option4"></button>
 
             <div class="footer p-4">
-                <button class="btn btn-success float-left" id="perv">Previos</button>
+                <button class="btn btn-success float-left" id="prev">Previos</button>
                 <button class="btn btn-success float-right" id="next">Next</button>
             </div>
         </div>
@@ -74,6 +74,52 @@
 // Variables 
 
 let count = 0;
+let time = 30;
+let marks = 0;
+let answer = [];
+let timer;
+
+
+// Main Ready function 
+
+$(document).ready(function(){
+    $('#finish').hide();
+    $('#Result').hide();
+    button_manager()
+
+// Create Function
+
+function button_manager(){
+    if(count > 0){
+        $('#prev').show();
+        if(count == 4){
+            $('#next').hide();
+            $('#finish').show();
+        }
+        else{
+            $('#next').show();
+        }
+    }
+    else{
+        $('#prev').hide();
+    }
+})
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
 
 
 
