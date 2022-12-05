@@ -144,8 +144,26 @@ function creating_result(data){
 }
 $("#options").hide();
 
-})
 
+// API Attachment 
+
+fetch('data.json')
+.then(function (response){
+    return response.json();
+})
+.then(function (data)){
+    $('#btn').click(function(){
+        $('#options').show();
+         adding_Questions(data.Question,count);
+         $('#start_page').hide();
+         $('#prev').hide();
+
+         timer = setInterval(timer_function , 1000);
+})
+}
+
+
+})
 
 
 
